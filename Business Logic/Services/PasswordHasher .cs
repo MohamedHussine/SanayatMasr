@@ -1,6 +1,7 @@
 ﻿
 using System.Security.Cryptography;
 using System.Text;
+using BusinessLogic.Interfaces;
 using DataAccess.Interfaces;
 
 public class PasswordHasher : IPasswordHasher

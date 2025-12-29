@@ -4,7 +4,7 @@ using FluentValidation;
 namespace BusinessLogic.Validation.Auth
 {
     public class RefreshTokenRequestDtoValidator
-        : AbstractValidator<RefreshTokenRequestDto>
+        : AbstractValidator<RefreshTokenRequestDTO>
     {
         public RefreshTokenRequestDtoValidator()
         {

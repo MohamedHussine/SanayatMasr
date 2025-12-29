@@ -1,4 +1,7 @@
 ﻿
+using BusinessLogic.Interfaces;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 using Microsoft.Extensions.Configuration;
 
 namespace BusinessLogic.Services

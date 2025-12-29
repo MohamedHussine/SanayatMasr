@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BusinessLogic.DTOs.Craftsmen;
 using BusinessLogic.Interfaces;
 using DataAccess.Interfaces;
 using Entities.Models;
@@ -19,7 +20,7 @@ namespace BusinessLogic.Services
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<CraftsmanSearchResultDto>> SearchAsync(
+        public async Task<IEnumerable<CraftsmanSearchResultDTO>> SearchAsync(
             string? name,
             int? professionId,
             int? governorateId,
@@ -69,7 +70,7 @@ namespace BusinessLogic.Services
                 query = query.Where(x => x.IsVerified == isVerified);
 
             var data = await query.ToListAsync();
-            return _mapper.Map<IEnumerable<CraftsmanSearchResultDto>>(data);
+            return _mapper.Map<IEnumerable<CraftsmanSearchResultDTO>>(data);
         }
     }
 }

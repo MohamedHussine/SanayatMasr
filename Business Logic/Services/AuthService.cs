@@ -37,7 +37,7 @@ namespace BusinessLogic.Services
                 .AnyAsync(x => x.Email == dto.Email && !x.IsDeleted);
 
             if (emailExists)
-                return ServiceResult<AuthResponseDto>.Fail("Email already exists");
+                return ServiceResult<AuthResponseDTO>.Fail("Email already exists");
 
             var user = _mapper.Map<User>(dto);
             user.PasswordHash = _hasher.Hash(dto.Password);
@@ -69,7 +69,7 @@ namespace BusinessLogic.Services
 
             var authResponse = await _tokenService.GenerateAsync(user);
 
-            return ServiceResult<AuthResponseDto>
+            return ServiceResult<AuthResponseDTO>
                 .Ok(authResponse, "Registered successfully");
         }
 

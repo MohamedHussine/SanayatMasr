@@ -4,7 +4,7 @@ using FluentValidation;
 namespace BusinessLogic.Validation.Auth
 {
     public class LoginRequestDtoValidator
-        : AbstractValidator<LoginRequestDto>
+        : AbstractValidator<LoginRequestDTO>
     {
         public LoginRequestDtoValidator()
         {
