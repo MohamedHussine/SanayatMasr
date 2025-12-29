@@ -1,0 +1,6 @@
+@SanayyMasr_HostAddress = http://localhost:5064
+
+GET {{SanayyMasr_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
