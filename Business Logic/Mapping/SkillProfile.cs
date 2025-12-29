@@ -1,22 +1,22 @@
 ﻿using AutoMapper;
 
 using BusinessLogic.DTOs.Skills;
-using DataAccess.Models;
+using Entities.Models;
 
-namespace BusinessLogic.Mappers
+namespace BusinessLogic.Mapping
 {
     public class SkillProfile : Profile
     {
         public SkillProfile()
         {
             // Add → Entity
-            CreateMap<AddSkillDto, Skill>();
+            CreateMap<AddSkillDTO, Skill>();
 
             // Update → Entity
-            CreateMap<UpdateSkillDto, Skill>();
+            CreateMap<UpdateSkillDTO, Skill>();
 
             // Entity → Get
-            CreateMap<Skill, GetSkillDto>();
+            CreateMap<Skill, GetSkillDTO>();
         }
     }
 }

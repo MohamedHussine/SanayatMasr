@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using BusinessLogic.DTOs.Gallery;
-using DataAccess.Models;
+using Entities.Models;
 
-namespace BusinessLogic.Mappers
+namespace BusinessLogic.Mapping
 {
     // Mapper خاص بالـ Gallery
     public class GalleryProfile : Profile

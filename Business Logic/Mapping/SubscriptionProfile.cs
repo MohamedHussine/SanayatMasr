@@ -1,14 +1,13 @@
 ﻿using AutoMapper;
 using BusinessLogic.DTOs.Subscriptions;
-using DataAccess.Models;
 
-namespace BusinessLogic.Mappers
+namespace BusinessLogic.Mapping
 {
     public class SubscriptionProfile : Profile
     {
         public SubscriptionProfile()
         {
-            CreateMap<CraftsmanSubscription, SubscriptionResponseDto>()
+            CreateMap<CraftsmanSubscription, SubscriptionResponseDTO>()
                 .ForMember(d => d.PlanName,
                     o => o.MapFrom(s => s.Plan!.Name))
                 .ForMember(d => d.Price,

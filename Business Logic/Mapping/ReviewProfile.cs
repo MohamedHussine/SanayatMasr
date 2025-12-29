@@ -1,15 +1,15 @@
 ﻿using AutoMapper;
 using BusinessLogic.DTOs.Review;
 using BusinessLogic.DTOs.Reviews;
-using DataAccess.Models;
+using Entities.Models;
 
-namespace BusinessLogic.Mappers
+namespace BusinessLogic.Mapping
 {
     public class ReviewProfile : Profile
     {
         public ReviewProfile()
         {
-            CreateMap<Review, GetReviewDto>()
+            CreateMap<Review, GetReviewDTO>()
                 .ForMember(
                     dest => dest.ReviewerName,
                     opt => opt.MapFrom(src =>

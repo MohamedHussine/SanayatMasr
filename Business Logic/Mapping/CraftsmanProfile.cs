@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using BusinessLogic.DTOs.Craftsmen;
-using DataAccess.Models;
+using Entities.Models;
 using System.Linq;
 
 public class CraftsmanProfile : Profile
@@ -10,13 +10,13 @@ public class CraftsmanProfile : Profile
         // ======================
         // Create / Update
         // ======================
-        CreateMap<CreateCraftsmanDto, Craftsman>();
-        CreateMap<UpdateCraftsmanProfileDto, Craftsman>();
+        CreateMap<CreateCraftsmanDTO, Craftsman>();
+        CreateMap<UpdateCraftsmanProfileDTO, Craftsman>();
 
         // ======================
         // Entity -> DTO
         // ======================
-        CreateMap<Craftsman, GetCraftsmanDto>()
+        CreateMap<Craftsman, GetCraftsmanDTO>()
             // ----------------------
             // User info
             // ----------------------
@@ -65,7 +65,7 @@ public class CraftsmanProfile : Profile
         // ======================
         // SEARCH RESULT
         // ======================
-        CreateMap<Craftsman, CraftsmanSearchResultDto>()
+        CreateMap<Craftsman, CraftsmanSearchResultDTO>()
             .ForMember(d => d.FullName,
                 o => o.MapFrom(s =>
                     s.User != null ? s.User.FullName : string.Empty))

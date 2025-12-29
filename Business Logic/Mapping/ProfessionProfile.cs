@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using BusinessLogic.DTOs.Professions;
-using DataAccess.Models;
+using Entities.Models;
 
-namespace BusinessLogic.Mappers
+namespace BusinessLogic.Mapping
 {
     // Mapping بين Entity و DTOs
     public class ProfessionProfile : Profile
@@ -10,13 +10,13 @@ namespace BusinessLogic.Mappers
         public ProfessionProfile()
         {
             // Create
-            CreateMap<CreateProfessionDto, Profession>();
+            CreateMap<CreateProfessionDTO, Profession>();
 
             // Update
-            CreateMap<UpdateProfessionDto, Profession>();
+            CreateMap<UpdateProfessionDTO, Profession>();
 
             // Response
-            CreateMap<Profession, ProfessionResponseDto>();
+            CreateMap<Profession, ProfessionResponseDTO>();
         }
     }
 }
