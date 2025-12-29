@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Context
+namespace DataAccess.Data
 {
     public class Context : DbContext
     {

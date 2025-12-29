@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccess.Context;
+using DataAccess.Data;
+using DataAccess.Interfaces;
 
-namespace BusinessLogic.Repository
+namespace DataAccess.Repositories
 {
     public class CraftsmanSubscriptionRepository :
         GeneralRepository<CraftsmanSubscription> ,IGeneralRepository<CraftsmanSubscription>

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BusinessLogic.Interface;
-using DataAccess.Context;
+using DataAccess.Data;
+using DataAccess.Interfaces;
 using Entities.Models;
 
-namespace BusinessLogic.Repository
+namespace DataAccess.Repositories
 {
     public class CraftsmanCityRepository :GeneralRepository<CraftsmanCity>,IGeneralRepository<CraftsmanCity>
     {

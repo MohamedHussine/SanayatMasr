@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Entities.Models;
 
-namespace BusinessLogic.Interface
+namespace DataAccess.Interfaces
 {
     public interface ISkillRepository:IGeneralRepository<Skill>
     {

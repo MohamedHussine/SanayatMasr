@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccess.Context;
+using DataAccess.Data;
+using DataAccess.Interfaces;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace BusinessLogic.Repository
+namespace DataAccess.Repositories
 {
     public class GeneralRepository<T> :IGeneralRepository<T> where T : BaseModel
     {

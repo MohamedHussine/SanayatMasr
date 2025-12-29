@@ -1,4 +1,4 @@
-﻿namespace BusinessLogic.Interface
+﻿namespace DataAccess.Interfaces
 {
     public interface IPasswordHasher
     {
