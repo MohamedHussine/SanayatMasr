@@ -7,7 +7,7 @@ using Shared.Helpers._ٌResponse;
 
 namespace BusinessLogic.Services
 {
-    public class CraftsmanService
+    public class CraftsmanService :ICraftsmanService
     {
         IGeneralRepository<Craftsman> _repo;
         IGeneralRepository<Gallery> _galleryRepo;

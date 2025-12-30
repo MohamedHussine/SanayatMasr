@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Text;
 using BusinessLogic.Interfaces;
 using BusinessLogic.Services;
@@ -7,9 +6,11 @@ using BusinessLogic.Validation.Auth;
 using DataAccess.Data;
 using DataAccess.Interfaces;
 using DataAccess.Repositories;
+using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 namespace SanayyMasr
@@ -58,12 +59,13 @@ namespace SanayyMasr
             // 🧠 CONTROLLERS + FLUENT VALIDATION
             // =====================================================
 
-            builder.Services.AddControllers()
-                .AddFluentValidation(cfg =>
-                {
-                    cfg.RegisterValidatorsFromAssemblyContaining<RegisterRequestDtoValidator>();
-                });
-           
+            //builder.Services.AddControllers()
+            //    .AddFluentValidation(cfg =>
+            //    {
+            //        cfg.RegisterValidatorsFromAssemblyContaining<RegisterRequestDtoValidator>();
+            //    });
+            builder.Services.AddValidatorsFromAssemblyContaining<RegisterRequestDtoValidator>();
+
 
 
             // =====================================================

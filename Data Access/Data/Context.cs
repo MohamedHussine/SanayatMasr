@@ -19,7 +19,17 @@ namespace DataAccess.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            // 1. تطبيق كل ملفات الـ Configuration (زي ما هي عندك)
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(Context).Assembly);
+
+            // 2. كود "الدروب" لتعطيل الـ Cascade Delete لكل العلاقات في الداتابيز
+            // السطور دي بتلف على كل علاقة (Foreign Key) وتخليها Restrict بدل Cascade
+            foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+            {
+                relationship.DeleteBehavior = DeleteBehavior.Restrict;
+            }
+
+            // 3. استدعاء الـ Seeding (زي ما هي عندك)
             modelBuilder.Seed();
         }
 
@@ -41,5 +51,6 @@ namespace DataAccess.Data
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Skill> Skills { get; set; }
         public DbSet<SubscriptionPlan> SubscriptionPlans { get; set; }
+       
     }
 }
