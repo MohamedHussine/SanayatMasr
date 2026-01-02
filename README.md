@@ -5,14 +5,20 @@
 
 ---
 
+---
+
 ## 📸 Project Screenshots
+
 <p align="center">
-  <img src="screencapture-localhost-4200-home-2026-01-02-13_31_22.jpg" width="80%" alt="Main Page">
+  <kbd>
+    <img src="src/Home.PNG" width="100%" alt="Main Home Page">
+  </kbd>
 </p>
 
 <p align="center">
-  <img src="link-to-your-second-image.jpg" width="45%" />
-  <img src="link-to-your-third-image.jpg" width="45%" />
+  <img src="src/craftsman.png" width="32%" alt="Feature 1" />
+  <img src="src/Profile.PNG" width="32%" alt="Feature 2" />
+  <img src="src/review.PNG" width="32%" alt="Feature 3" />
 </p>
 
 ---
@@ -56,4 +62,4 @@
 ## ⚙️ How to Run
 1. قم بتحميل المشروع (Clone):
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/Sanaieya-Masr.git](https://github.com/YOUR_USERNAME/Sanaieya-Masr.git)
+   git clone [https://github.com/MohamedHussine/SanayatMasr.git)
